@@ -48,8 +48,7 @@ class PieceMover < Mover
 
   def call(board, player)
     my_piece = get_piece(board, @from, player)
-    raise ShogiError, '移動できないマスです' unless my_piece.movable?(@from.x.ord, @from.y, @to.x.rd, @to.y)
-
+    #raise ShogiError, '移動できないマスです' unless my_piece.movable?(@from.x.ord, @from.y.to_i, @to.x.ord, @to.y.to_i)
 
     other_piece = put_piece(board, @to, player, my_piece)
 
